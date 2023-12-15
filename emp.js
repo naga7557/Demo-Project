@@ -34,5 +34,5 @@ document.getElementById('employeeForm').addEventListener('submit', function(even
     }
 
     var result = document.getElementById('result');
-    result.innerHTML = `<p>Name: ${name}</p><p>Email: ${email}</p><p>Position: ${position}</p>`;
+    result.innerHTML = `<p>Name: ${name}</p><p>Email: ${email}</p><p>Position: ${position}</p><p>Salary: ${salary}</p>`;
 });
