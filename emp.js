@@ -6,9 +6,16 @@ document.getElementById('employeeForm').addEventListener('submit', function(even
     var position = document.getElementById('position').value;
 
     // Validation to accept only alphabets, dots, and spaces for the name field
-    var regex = /^[A-Za-z .]+$/;
-    if (!regex.test(name)) {
+    var nameRegex = /^[A-Za-z .]+$/;
+    if (!nameRegex.test(name)) {
         alert('Please enter a valid name with alphabets, dots, and spaces only.');
+        return;
+    }
+
+    // Validation to accept only alphabets, dots, and spaces for the position field
+    var positionRegex = /^[A-Za-z .]+$/;
+    if (!positionRegex.test(position)) {
+        alert('Please enter a valid position with alphabets, dots, and spaces only.');
         return;
     }
 
