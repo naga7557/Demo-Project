@@ -5,6 +5,12 @@ document.getElementById('employeeForm').addEventListener('submit', function(even
     var email = document.getElementById('email').value;
     var position = document.getElementById('position').value;
 
+    // Validation to check if the name field is not empty
+    if (name.trim() === '') {
+        alert('Name is required.');
+        return;
+    }
+
     // Validation to accept only alphabets, dots, and spaces for the name field
     var nameRegex = /^[A-Za-z .]+$/;
     if (!nameRegex.test(name)) {
