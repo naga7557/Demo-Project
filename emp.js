@@ -4,6 +4,13 @@ document.getElementById('employeeForm').addEventListener('submit', function(even
     var name = document.getElementById('name').value;
     var email = document.getElementById('email').value;
     var position = document.getElementById('position').value;
+    var salary = document.getElementById('salary').value; // Add the employee salary field
+
+    // Validation to check if the name field is not empty
+    if (name.trim() === '') {
+        alert('Name is required.');
+        return;
+    }
 
     // Validation to accept only alphabets, dots, and spaces for the name field
     var nameRegex = /^[A-Za-z .]+$/;
@@ -27,5 +34,5 @@ document.getElementById('employeeForm').addEventListener('submit', function(even
     }
 
     var result = document.getElementById('result');
-    result.innerHTML = `<p>Name: ${name}</p><p>Email: ${email}</p><p>Position: ${position}</p>`;
+    result.innerHTML = `<p>Name: ${name}</p><p>Email: ${email}</p><p>Position: ${position}</p><p>Salary: ${salary}</p>`;
 });
