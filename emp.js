@@ -4,6 +4,7 @@ document.getElementById('employeeForm').addEventListener('submit', function(even
     var name = document.getElementById('name').value;
     var email = document.getElementById('email').value;
     var position = document.getElementById('position').value;
+    var salary = document.getElementById('salary').value; // Add the employee salary field
 
     // Validation to check if the name field is not empty
     if (name.trim() === '') {
