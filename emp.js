@@ -19,6 +19,13 @@ document.getElementById('employeeForm').addEventListener('submit', function(even
         return;
     }
 
+    // Validation to check if the email field is not empty and has a valid email format
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+
     var result = document.getElementById('result');
     result.innerHTML = `<p>Name: ${name}</p><p>Email: ${email}</p><p>Position: ${position}</p>`;
 });
